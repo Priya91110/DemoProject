@@ -1,28 +1,57 @@
-# DemoProject
-Project Name:- DemoProject
 
-Objective of Project :- Main Aim of this project is to add products and can see products in all products and it can create, read , update, delete product.
+# DemoProject (Machine Task )
+Main Aim of this project is to add products and can see products in all products and it can create, read , update, delete product
 
-How project works:- 1. First user have to login or signup
-                     2. After login user name display on nav bar 
-                     3. User can add Product
-                     4. User can see all the Products
-                     5. User can perform CRUD operation like create, read, update, delete
-                     6. At last user can logout 
-                     
-Technologies used: PYTHON and DJANGO and for front end HTML, CSS, Bootstrap     
 
-For this shopping project first i have desgined its front end and CREATE A FORM TO ADD PRODUCTS
 
-I have made navbar in that PRODUCTS, ALL PRODUCTS, LOGIN, SIGNUP, LOGOUT links are there.
-I have made SIGNUP PAGE and By this page user can signup.
+## Virtual Environment Installation, create and activate.
+1. Install Virtual Environment
+```
+pip install virtualenv
+```
 
-I have used DJANGO AUTHENTICATION to authenticate user login
-            If user is logged in if and only it shows all the links like product, all products, logout
-            If the user is not logged in he/she have to login, or signup for this website.
+2. Create Virtual Environment
+```
+virtualenv myenv
+```
+3. Activate Virtual Environment
+```
+myenv\Scripts\activate.bat
+```
+4. Deactivate Virtual Environment
+```
+deactivate
+```
 
-I have created PRODUCT MODEL in that i have created NAME, DESCRIPTION and PRICE fields
+## Install project dependencies
+1. Install requirement file
+```
+pip install -r requirements.txt
+```
+2. Run following command to create application default database
+```
+ python manage.py migrate
+ python manage.py createsuperuser
+```
+3. Run project on local server
+```
+python manage.py runserver
+```
+4. Create Superuser(Admin)
+```
+python manage.py createsuperuser
+```
 
-I have performed CRUD operation for that i have used GENERIC CLASS in generic class i have used UPDATEVIEW, DELETEVIEW 
+## How project works
+1. First user have to login or signup
+2. After login user name display on nav bar 
+3. User can add Product
+4. User can see all the Products
+5. User can perform CRUD operation like create, read, update, delete
+6. At last user can logout 
 
-I have created SUPEUSER and the admin can see models here and can   CREATE, READ, UPDATE, DELETE products from the ADMIN PANEL.
+
+## Technologies used:
+1.Backend:- PYTHON and DJANGO 
+2.Frontend:- HTML, CSS, Bootstrap
+3.Database:- sqlite3(default)
