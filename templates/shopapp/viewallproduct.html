@@ -1,0 +1,46 @@
+
+{%extends "shopapp/index.html"%}
+
+{%block content %}
+<style>
+    h1{
+        text-align:center;
+        color:green;
+    }
+    thead{
+        
+    }
+    table{
+      text-align:center;
+    }
+</style>
+<h1>View all your prodcuts here... </h1><br>
+<hr>
+{%if newproductdata %}
+<table "table table-dark">
+    {% for i in newproductdata%}
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Description</th>
+        <th scope="col">Price</th>
+        <th scope="col">Opertions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{i.Name}}</td>
+        <td>{{i.Description}}</td>
+        <td>{{i.Price}}</td>
+        <td><a href="/shopapp/delete/{{i.id}}"type="button" class="btn btn-danger" name="button">{{i.id}}Delete</a></td><td></td>
+        <td><a href="/shopapp/update/{{i.id}}" type="button" class="btn btn-success" name="button">{{i.id}}Update</a></td><td></td>
+      </tr>
+      <tr>
+    </tbody>
+    {%endfor%}
+  </table>
+    {%else%}
+  no data
+  {% endif %}
+  {%endblock%}
+

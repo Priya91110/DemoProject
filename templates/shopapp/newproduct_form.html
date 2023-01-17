@@ -1,0 +1,51 @@
+{%extends "shopapp/index.html"%}
+{%block content %}
+<style media="screen">
+    table{
+        color:black;
+        font-size:35px;
+        font-family:Arial Rounded MT Bold;
+        margin-top:50px;
+        margin-left:740px;
+        font-height:3px;
+        line-height:70px;.
+        font-weight:bold;
+    }
+    h1{
+      text-align:center;
+      font-size:45px;
+      font-weight:bold;
+      font-family:Arial Rounded MT Bold;
+      margin-top:50px;
+    }
+     button{
+       margin-left:930px;
+       margin-top:20px;
+       padding:10px;
+       font-family:Arial Rounded MT Bold;
+       font-size:35px;
+       width:180px;
+       color:black;
+       background-color:#5cb85c;
+       border: 2px solid hot pink;
+       border-radius: 50px 20px;
+     }
+  </style>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Add your Product </h1>
+      <form action="" method="POST" enctype="multipart/form-data" class="form-group">
+    <table>
+        {%csrf_token%}
+      {{form}}
+      {% comment %} <input type="submit" value="Register"> {% endcomment %}
+    </table>
+    <button type="submit" name="button"  class="btn btn-success">Register</button>
+      </form>
+    </div>
+</div>
+{%endblock%}
+
+
+
+

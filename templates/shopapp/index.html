@@ -1,0 +1,118 @@
+
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar</title>
+  {% comment %} <link href="Style.css" rel="Stylesheet"> {% endcomment %}
+  <style>
+    body {
+      margin: 0;
+      background: rgb(255, 255, 255);
+      font-family:Arial Rounded MT Bold;
+      font-weight: 800;
+    }
+    
+    .Navbar {
+      width: 80%;
+      margin: 0 auto;
+    }
+    
+    header {
+      background: #121C27;
+      border: solid rgb(18, 28, 39);
+        border-radius: 5px;
+    }
+    
+    header::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+    
+    .Design {
+      float: left;
+      padding: 30px 20px;
+      color:rgb(255, 255, 255);
+      border: solid rgb(255, 255, 255);
+      border-radius: 60px;
+    }
+    
+    nav {
+      float: right;
+    }
+    
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    
+    nav li {
+      display: inline-block;
+      margin-left: 70px;
+      padding-top: 23px;
+    
+      position: relative;
+    }
+    
+    nav a {
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 18px;
+    }
+    
+    nav a:hover {
+      color: rgb(255, 204, 204);
+    }
+    
+    nav a::before {
+      content: ' ';
+      display: block;
+      height: 2px;
+      background-color: rgb(255, 255, 255);
+    
+      position: absolute;
+      top: 0;
+      width: 0%;
+    
+      transition: all ease-in-out 250ms;
+    }
+    
+    nav a:hover::before {
+      width: 100%;
+    }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <div class="Navbar">
+      <h1 class="Design">ShopSky</h1>
+      <nav>
+        <ul>
+          {%if user.is_authenticated%}
+          <li><a href="/">Home</a></li>
+          <li><a href="/shopapp/newproduct/">Product</a></li>
+          <li><a href="/shopapp/viewallproduct/">View All Product</a></li>
+          <li><a href="#">Welcome {{user.username}}</a></li>
+          <li><a href="/accounts/logout/">Logout</a></li>
+          {%endif%}
+          {%if not user.is_authenticated%}
+          <li><a href="/accounts/login/">Login</a></li>
+          <li><a href="/shopapp/signup/">Signup</a></li>
+          {%endif%}
+        </ul>
+      </nav>
+    </div>
+  </header>
+  {%block content%}
+      <div class="container">
+      
+      </div>
+  {%endblock%}
+</body>

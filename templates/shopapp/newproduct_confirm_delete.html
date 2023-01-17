@@ -1,0 +1,11 @@
+{% comment %} {%extends 'testapp/homepage.html'%} {% endcomment %}
+{%load static %}
+{%block content%}
+<div class="card">
+  <form class="" method="post">
+    {% csrf_token %}
+  <button type="submit" class="btn btn-danger" name="button">Delete </button>
+  <a href="/" class="btn btn-info" >Cancel</a>
+</form>
+</div>
+{%endblock%}

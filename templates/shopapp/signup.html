@@ -1,0 +1,58 @@
+{%extends 'shopapp/index.html'%}
+
+{%block content%}
+<style media="screen">
+   table{
+    color:black;
+    font-size:35px;
+    font-family:Arial Rounded MT Bold;
+    margin-top:50px;
+    margin-left:200px;
+    font-height:3px;
+    line-height:70px;.
+    font-weight:bold;
+    margin-right:100px;
+ }
+ h1{
+  text-align:center;
+  font-size:45px;
+  font-weight:bold;
+  font-family:Arial Rounded MT Bold;
+  margin-top:50px;
+ }
+ button{
+   margin-left:10px;
+   margin-top:10px;
+   padding:5px;
+   font-family:Arial Rounded MT Bold;
+   font-size:35px;
+   width:180px;
+   color:black;
+   background-color:#5cb85c;
+   border: 2px solid hot pink;
+   border-radius: 50px 20px;
+ }
+ .second{
+   margin-left:100px;
+ }
+ </style>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-8">
+      <h1>SignUp </h1>
+      <form method="post" enctype="multipart/form-data" style="font-size:25px;">
+        <table >
+   
+          {%csrf_token%}
+          {{form.as_p}}
+        </table>
+      <button type="submit" name="button" class="btn btn-success btn-lg">Signup</button>
+      </form>
+    </div>
+    <div class="col-4">
+      
+    </div>
+  </div>
+<div>
+
+{%endblock%}

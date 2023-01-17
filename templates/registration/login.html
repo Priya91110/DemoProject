@@ -1,0 +1,49 @@
+{%extends "shopapp/index.html"%}
+{%block content%}
+<style media="screen">
+  table{
+      color:black;
+      font-size:35px;
+      font-family:Arial Rounded MT Bold;
+      margin-top:50px;
+      margin-left:740px;
+      font-height:3px;
+      line-height:70px;.
+      font-weight:bold;
+  }
+  h1{
+    text-align:center;
+    font-size:45px;
+    font-weight:bold;
+    font-family:Arial Rounded MT Bold;
+    margin-top:50px;
+  }
+   button{
+     margin-left:930px;
+     margin-top:25px;
+     padding:10px;
+     font-family:Arial Rounded MT Bold;
+     font-size:35px;
+     width:180px;
+     color:black;
+     background-color:#5cb85c;
+     border: 2px solid hot pink;
+     border-radius: 50px 20px;
+   }
+</style>
+<div class="container-fluid">
+      <div class="container">
+        <h1>LOGIN</h1>
+        <form class="form-group" method="post" enctype="multipart/form-data">
+          <table>
+            {{form}}
+            {%csrf_token%}
+          </table>
+            <button type="submit" name="button"  class="btn btn-success">Login</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+{%endblock%}
