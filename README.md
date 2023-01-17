@@ -3,7 +3,7 @@ Project Name:- DemoProject
 
 Objective of Project :- Main Aim of this project is to add products and can see products in all products and it can create, read , update, delete product.
 
-How project works:- 1. First user havre to login or signup
+How project works:- 1. First user have to login or signup
                      2. After login user name display on nav bar 
                      3. User can add Product
                      4. User can see all the Products
